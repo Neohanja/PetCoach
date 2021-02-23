@@ -1,0 +1,96 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PetFriend : MonoBehaviour
+{
+    [Header("UI Connection Elements")]
+    public Text uiFriendResponse;
+    public Button nextOption;
+
+    [Header("Dialog Options")]
+    public DialogOptions[] friendDialogChoices;
+
+    [Header("UI Options")]
+    public float responseTimer;
+    float elapsedTimer;
+    bool startTimer;
+    public bool useButtonToContinueDialog;
+
+    void Start()
+    {
+        ResetFriendDialog();
+    }
+
+    void Update()
+    {
+        if(startTimer && !useButtonToContinueDialog)
+        {
+            elapsedTimer += Time.deltaTime;
+
+            if(elapsedTimer >= responseTimer)
+            {
+                ResetFriendDialog();
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// Turns the player options back on and can be used to remove any "friend" reponse effects
+    /// </summary>
+    public void ResetFriendDialog()
+    {
+        elapsedTimer = 0f;
+        uiFriendResponse.text = "";
+        startTimer = false;
+
+        if (nextOption != null) nextOption.gameObject.SetActive(false);
+
+        foreach (DialogOptions dialog in friendDialogChoices)
+        {
+            if (dialog.uiPlayerButtonText != null)
+            {
+                dialog.uiPlayerButtonText.transform.parent.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run this when a dialog option is selected.
+    /// </summary>
+    public void SelectedDialog(int option)
+    {
+        startTimer = true;
+
+        //Clamps values to avoid the game from breaking.
+        if (option < 0) option = 0;
+        if (option >= friendDialogChoices.Length) option = friendDialogChoices.Length - 1;
+
+        uiFriendResponse.text = friendDialogChoices[option].friendResponse;
+        if (useButtonToContinueDialog && nextOption != null) nextOption.gameObject.SetActive(true);
+
+        foreach (DialogOptions dialog in friendDialogChoices)
+        {
+            if (dialog.uiPlayerButtonText != null)
+            {
+                dialog.uiPlayerButtonText.transform.parent.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Once the options are input, automatically updates in the game view for the player options.
+    /// </summary>
+    void OnValidate()
+    {
+        foreach(DialogOptions dialog in friendDialogChoices)
+        {
+            if(dialog.uiPlayerButtonText != null)
+            {
+                dialog.uiPlayerButtonText.text = dialog.playerChoice;
+            }
+        }
+    }
+}
