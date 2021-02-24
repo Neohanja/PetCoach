@@ -21,6 +21,14 @@ public class PetFriend : MonoBehaviour
     void Start()
     {
         ResetFriendDialog();
+
+        foreach(DialogOptions speak in friendDialogChoices)
+        {
+            if(speak.uiPlayerButtonText.text != speak.playerChoice)
+            {
+                speak.uiPlayerButtonText.text = speak.playerChoice;
+            }
+        }
     }
 
     void Update()
