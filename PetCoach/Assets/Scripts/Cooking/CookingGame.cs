@@ -28,6 +28,8 @@ public class CookingGame : MonoBehaviour
 
         UpdateScore();
         friendSays.text = "Let's get started!";
+
+        plateLocation = ingredientPlacementLocation.position;
     }
 
     // Update is called once per frame
@@ -79,6 +81,8 @@ public class CookingGame : MonoBehaviour
         totalScore = 0;
 
         friendSays.text = "Starting over.";
+
+        ingredientPlacementLocation.position = plateLocation;
 
         UpdateScore();
         ingredientsAdded.Clear();
