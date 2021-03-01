@@ -27,7 +27,7 @@ public class CookingGame : MonoBehaviour
         totalScore = 0;
 
         UpdateScore();
-        friendSays.text += "Let's get started!";
+        friendSays.text = "Let's get started!";
     }
 
     // Update is called once per frame
