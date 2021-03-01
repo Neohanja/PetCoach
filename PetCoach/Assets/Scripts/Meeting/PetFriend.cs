@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PetFriend : MonoBehaviour
 {
@@ -44,6 +45,12 @@ public class PetFriend : MonoBehaviour
         }
     }
 
+    //More functions can be added to determine the mini-game used later on, such as if a rhythm game or cooking game,
+    //style of cooking game, ect.
+    public void GotoCookingMinigame()
+    {
+        SceneManager.LoadScene("Cooking");
+    }
 
     /// <summary>
     /// Turns the player options back on and can be used to remove any "friend" reponse effects
