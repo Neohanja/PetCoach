@@ -27,6 +27,7 @@ public class CookingGame : MonoBehaviour
         totalScore = 0;
 
         UpdateScore();
+        friendSays.text += "Let's get started!";
     }
 
     // Update is called once per frame
@@ -76,6 +77,8 @@ public class CookingGame : MonoBehaviour
         }
 
         totalScore = 0;
+
+        friendSays.text = "Starting over.";
 
         UpdateScore();
         ingredientsAdded.Clear();
