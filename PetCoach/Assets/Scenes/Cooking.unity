@@ -233,21 +233,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookingIngredients:
   - ingredientName: Bread
-    ingredientModel: {fileID: 6993938234933692950, guid: 2a4b51c31707cf445baab4369346fda6, type: 3}
+    ingredientModel: {fileID: 7973722180798723975, guid: 2a4b51c31707cf445baab4369346fda6, type: 3}
     ingredientType: 1
     ingredientModelSize: 0.05
     flavorProfile: 5
     weightAdded: 2
     UIButtonText: {fileID: 482225305}
   - ingredientName: Ham
-    ingredientModel: {fileID: 6993938234933692950, guid: e9064b5a9872a444c9c1a7fc28c0864f, type: 3}
+    ingredientModel: {fileID: 5414785587055111985, guid: e9064b5a9872a444c9c1a7fc28c0864f, type: 3}
     ingredientType: 2
     ingredientModelSize: 0.05
     flavorProfile: 8
     weightAdded: 6
     UIButtonText: {fileID: 443264254}
   - ingredientName: Tofu
-    ingredientModel: {fileID: 6993938234933692950, guid: 52d57f56784a61345af4cb8463b42d6e, type: 3}
+    ingredientModel: {fileID: 4851232823025592521, guid: 52d57f56784a61345af4cb8463b42d6e, type: 3}
     ingredientType: 0
     ingredientModelSize: 0.05
     flavorProfile: 3
