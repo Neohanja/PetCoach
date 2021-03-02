@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 69159244}
   - component: {fileID: 69159243}
   m_Layer: 5
-  m_Name: Reponse
+  m_Name: Response
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 1327155244}
   - component: {fileID: 1327155243}
   m_Layer: 0
-  m_Name: Room?
+  m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,10 +1940,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1951,7 +1951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What is your weight?
+  m_Text: Please step on this scale
 --- !u!222 &1661341097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2030,7 +2030,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello, Friend!
+  m_Text: Hello, Rosie
 --- !u!222 &1707866525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2645,13 +2645,13 @@ MonoBehaviour:
   uiFriendResponse: {fileID: 69159243}
   nextOption: {fileID: 1854466200}
   friendDialogChoices:
-  - playerChoice: Hello, Friend!
+  - playerChoice: Hello, Rosie
     friendResponse: Hello, Coach!
     uiPlayerButtonText: {fileID: 1707866524}
   - playerChoice: How are you today?
     friendResponse: I am great!
     uiPlayerButtonText: {fileID: 932800947}
-  - playerChoice: What is your weight?
+  - playerChoice: Please step on this scale
     friendResponse: 65 lbs.
     uiPlayerButtonText: {fileID: 1661341096}
   - playerChoice: Do you exercise often?
@@ -2737,8 +2737,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hold right mouse to rotate friend. Use W/S to move forward and back. Press
-    i to inverse Up/Down mouse movement
+  m_Text: "Hold right mouse to rotate friend. Use W/S to move forward and back. Press
+    'i'\n to inverse Up/Down mouse movement"
 --- !u!222 &2063973232
 CanvasRenderer:
   m_ObjectHideFlags: 0
